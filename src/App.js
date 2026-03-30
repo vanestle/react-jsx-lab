@@ -1,32 +1,24 @@
 import React from 'react';
-import Item from './Item';
-import Welcome from './Welcome';
-import UserCard from './UserCard';
-import HooksDemo from './HooksDemo';
+import Header from './components/Header';
+import UserList from './components/UserList';
+import Footer from './components/Footer';
+
+const users = [
+  { name: 'Vanessa', email: 'vanessa@gmail.com', role: 'Frontend Dev' },
+  { name: 'Budi', email: 'budi@gmail.com', role: 'Backend Dev' },
+  { name: 'Citra', email: 'citra@gmail.com', role: 'UI Designer' },
+  { name: 'Dani', email: 'dani@gmail.com', role: 'Full Stack Dev' },
+];
 
 function App() {
-  const name = "John Doe";
-  const items = ['Item 1', 'Item 2', 'Item 3'];
-
   return (
-    <div>
-      <h1>Hello, {name}!</h1>
-      <p>Welcome to React with JSX.</p>
-
-      <Welcome />
-
-      <h2>My Items:</h2>
-      <ul>
-        {items.map((item, index) => (
-          <Item key={index} name={item} />
-        ))}
-      </ul>
-
-      <h2>User Cards:</h2>
-      <UserCard name="Dharam" email="dharam@gmail.com" />
-      <UserCard name="Rahul" email="rahul@gmail.com" />
-
-      <HooksDemo />
+    <div style={{ background: '#f5f5f5', minHeight: '100vh' }}>
+      <Header
+        title="Component Hierarchy Lab"
+        subtitle="Building reusable UI components in React"
+      />
+      <UserList users={users} />
+      <Footer />
     </div>
   );
 }
