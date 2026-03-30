@@ -2,6 +2,7 @@ import React from 'react';
 import Item from './Item';
 import Welcome from './Welcome';
 import UserCard from './UserCard';
+import HooksDemo from './HooksDemo';
 
 function App() {
   const name = "John Doe";
@@ -24,6 +25,8 @@ function App() {
       <h2>User Cards:</h2>
       <UserCard name="Dharam" email="dharam@gmail.com" />
       <UserCard name="Rahul" email="rahul@gmail.com" />
+
+      <HooksDemo />
     </div>
   );
 }
