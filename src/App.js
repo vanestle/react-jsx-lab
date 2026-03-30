@@ -1,5 +1,7 @@
 import React from 'react';
 import Item from './Item';
+import Welcome from './Welcome';
+import UserCard from './UserCard';
 
 function App() {
   const name = "John Doe";
@@ -9,12 +11,19 @@ function App() {
     <div>
       <h1>Hello, {name}!</h1>
       <p>Welcome to React with JSX.</p>
+
+      <Welcome />
+
       <h2>My Items:</h2>
       <ul>
         {items.map((item, index) => (
           <Item key={index} name={item} />
         ))}
       </ul>
+
+      <h2>User Cards:</h2>
+      <UserCard name="Dharam" email="dharam@gmail.com" />
+      <UserCard name="Rahul" email="rahul@gmail.com" />
     </div>
   );
 }
